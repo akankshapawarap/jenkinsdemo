@@ -4,6 +4,7 @@ pipeline {
     stage('install apache') {
       steps {
         sh 'sudo apt install apache2 -y'
+        sh 'sudo dpkg --configure -a'
         sh 'sudo service apache2 start'
       }
     }
